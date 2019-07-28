@@ -72,7 +72,7 @@ class OtzovikCom:
         actual_reviews_ids = list(set(all_reviews_ids) - set(exclude_ids))
         for review_id in actual_reviews_ids:
             self.collect_review(review_id)
-        print(actual_reviews_ids)
+        return self
 
     def collect_review(self, review_id):
         url = urljoin(self.BASE_URL, 'review_{}.html'.format(review_id))
@@ -88,6 +88,8 @@ class OtzovikCom:
             'title']
         soup.select_one('div.review-bar>span>b').decompose()
         new_review.like = int(soup.select_one('div.review-bar>span').text)
+        new_review.id = self._convert_string_to_int(
+                                soup.select_one('div.review-bar>a')['href'])
         new_review.disadvantages = soup.select_one('div.review-plus').text
         new_review.disadvantages = soup.select_one('div.review-minus').text
         new_review.text = soup.select_one('div.review-body.description').text
@@ -134,7 +136,6 @@ class OtzovikCom:
         if not table_soup:
             return None
         for td_soup in table_soup.select('tbody>tr>td'):
-            print(td_soup.text)
             if 'Общее впечатление:' == td_soup.text:
                 return td_soup.next.next.next.next.text
             if '{}:'.format(title) == td_soup.text:
@@ -198,7 +199,6 @@ class OtzovikCom:
         return self.soup
 
     def _captcha(self, soup, url):
-        print(soup)
         img_url = soup.select_one('form>table>tr>td[align="left"]>img')['src']
         r = self.session.request('GET', urljoin(self.BASE_URL, img_url),
                                  stream=True)
@@ -211,7 +211,6 @@ class OtzovikCom:
             data = {'captcha_url': path,
                     'keystring3': captcha_res,
                     'action_capcha_ban': "     Я не робот!     "}
-            print(data)
             self.request('POST', url,
                          data=data)
         else:
@@ -240,6 +239,7 @@ class Rating:
 
 
 class Review:
+    id = None
     title = None
     text = None
     like = None
