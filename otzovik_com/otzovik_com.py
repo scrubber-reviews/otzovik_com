@@ -258,6 +258,11 @@ class Review:
         self.author = Author()
         self.comments = list()
 
+    def get_text(self):
+        return 'Комментарий: {}\n Плюсы: {}\n Минусы: {}'.format(
+            self.text, self.advantages, self.disadvantages
+        )
+
 
 class Author:
     name = None
