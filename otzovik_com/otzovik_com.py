@@ -99,7 +99,9 @@ class OtzovikCom:
         author_soup = soup.select_one('div.review-contents>'
                                       'div[itemprop="author"]')
         author.name = soup.select_one('div.login-col>a.user-login>span').text
-        author.reputation = int(author_soup.select_one('div.karma.karma1').text)
+        if author_soup.select_one('div.karma.karma1'):
+            author.reputation = \
+                int(author_soup.select_one('div.karma.karma1').text)
         author.count_reviews = int(
             author_soup.select_one('div.reviews-col>div>a').text)
         author.time_of_use = self._get_attribute('Время использования')
@@ -218,6 +220,7 @@ class OtzovikCom:
             raise Exception('Can not load captcha')
 
     def request(self, method, url, **kwargs):
+        time.sleep(2)
         resp = self.session.request(method, url, **kwargs)
         self.soup = BeautifulSoup(resp.text, 'html.parser')
         if self.soup.select_one('form>input[name="captcha_url"]'):
@@ -236,6 +239,17 @@ class Rating:
     passage = None
     advertising = None
     on_scale = 5
+
+    def get_dict(self):
+        return {
+            'average_rating': self.average_rating,
+            'price': self.price,
+            'quality': self.quality,
+            'staff': self.staff,
+            'passage': self.passage,
+            'advertising': self.advertising,
+            'on_scale': self.on_scale,
+        }
 
 
 class Review:
@@ -258,6 +272,22 @@ class Review:
         self.author = Author()
         self.comments = list()
 
+    def get_dict(self):
+        return {
+            'id': self.id,
+            'title': self.title,
+            'text': self.text,
+            'like': self.like,
+            'sub_reviews': [item.get_dict() for item in self.sub_reviews],
+            'rating': self.rating.get_dict(),
+            'ratings': self.ratings,
+            'advantages': self.advantages,
+            'disadvantages': self.disadvantages,
+            'author': self.author.get_dict(),
+            'overall_impression': self.overall_impression,
+            'is_recommend_friends': self.is_recommend_friends,
+        }
+
     def get_text(self):
         return 'Комментарий: {}\n Плюсы: {}\n Минусы: {}'.format(
             self.text, self.advantages, self.disadvantages
@@ -278,6 +308,29 @@ class Author:
     street = None
     house = None
 
+    def get_dict(self):
+        return {
+            'name': self.name,
+            'reputation': self.reputation,
+            'count_reviews': self.count_reviews,
+            'location': self.location,
+            'url': self.url,
+            'year_visit': self.year_visit,
+            'country': self.country,
+            'township': self.township,
+            'district': self.district,
+            'city': self.city,
+            'street': self.street,
+            'house': self.house,
+        }
+
 
 class CaptchaException(Exception):
     pass
+
+
+if __name__ == '__main__':
+    prov = OtzovikCom('gostinica_volhov_russia_velikiy_novgorod')
+    prov.start()
+    for r in prov.reviews:
+        print(r.get_dict())
