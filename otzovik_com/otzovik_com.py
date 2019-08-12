@@ -238,6 +238,7 @@ class Rating:
     staff = None
     passage = None
     advertising = None
+    min_scale = 1
     on_scale = 5
 
     def get_dict(self):

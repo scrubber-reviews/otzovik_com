@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c29ebdf0-36c7-4657-bedf-0bfe67e09461" name="Default Changelist" comment="added id to reviews and delete prints">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.rst" beforeDir="false" afterPath="$PROJECT_DIR$/README.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/otzovik_com/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/otzovik_com/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/otzovik_com/otzovik_com.py" beforeDir="false" afterPath="$PROJECT_DIR$/otzovik_com/otzovik_com.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
@@ -43,7 +40,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.otzovik_com">
+  <component name="RunManager" selected="Makefile.release">
     <configuration name="dist" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
       <makefile filename="$PROJECT_DIR$/Makefile" target="dist" workingDirectory="" arguments="">
         <envs />
@@ -80,11 +77,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Makefile.release" />
+        <item itemvalue="Makefile.dist" />
+        <item itemvalue="Makefile.release" />
+        <item itemvalue="Makefile.dist" />
         <item itemvalue="Python.otzovik_com" />
-        <item itemvalue="Makefile.release" />
-        <item itemvalue="Makefile.dist" />
-        <item itemvalue="Makefile.release" />
-        <item itemvalue="Makefile.dist" />
       </list>
     </recent_temporary>
   </component>
@@ -111,7 +108,8 @@
       <workItem from="1565033636608" duration="28000" />
       <workItem from="1565110463106" duration="297000" />
       <workItem from="1565111093265" duration="167000" />
-      <workItem from="1565359475454" duration="461000" />
+      <workItem from="1565359475454" duration="1835000" />
+      <workItem from="1565599138514" duration="185000" />
     </task>
     <task id="LOCAL-00001" summary="added id to reviews and delete prints">
       <created>1564357355253</created>
