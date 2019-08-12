@@ -4,7 +4,6 @@
     <list default="true" id="c29ebdf0-36c7-4657-bedf-0bfe67e09461" name="Default Changelist" comment="added id to reviews and delete prints">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/otzovik_com/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/otzovik_com/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/otzovik_com/otzovik_com.py" beforeDir="false" afterPath="$PROJECT_DIR$/otzovik_com/otzovik_com.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,7 +39,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Makefile.release">
+  <component name="RunManager" selected="Python.otzovik_com">
     <configuration name="dist" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
       <makefile filename="$PROJECT_DIR$/Makefile" target="dist" workingDirectory="" arguments="">
         <envs />
@@ -77,11 +76,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.otzovik_com" />
         <item itemvalue="Makefile.release" />
         <item itemvalue="Makefile.dist" />
         <item itemvalue="Makefile.release" />
         <item itemvalue="Makefile.dist" />
-        <item itemvalue="Makefile.release" />
       </list>
     </recent_temporary>
   </component>
@@ -111,7 +110,8 @@
       <workItem from="1565359475454" duration="1835000" />
       <workItem from="1565599138514" duration="282000" />
       <workItem from="1565599571098" duration="336000" />
-      <workItem from="1565601196125" duration="271000" />
+      <workItem from="1565601196125" duration="372000" />
+      <workItem from="1565611600858" duration="32000" />
     </task>
     <task id="LOCAL-00001" summary="added id to reviews and delete prints">
       <created>1564357355253</created>
@@ -176,6 +176,6 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/otzovik_com$otzovik_com.coverage" NAME="otzovik_com Coverage Results" MODIFIED="1565359845091" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/otzovik_com" />
+    <SUITE FILE_PATH="coverage/otzovik_com$otzovik_com.coverage" NAME="otzovik_com Coverage Results" MODIFIED="1565601535819" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/otzovik_com" />
   </component>
 </project>
