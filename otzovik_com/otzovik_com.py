@@ -238,12 +238,15 @@ class Rating:
     staff = None
     passage = None
     advertising = None
-    min_scale = 1
-    on_scale = 5
+    min_scale = 5
+    max_scale = 5
+    on_scale = 5  # Deprecate
 
     def get_dict(self):
         return {
             'average_rating': self.average_rating,
+            'min_scale': self.on_scale,
+            'max_scale': self.on_scale,
             'price': self.price,
             'quality': self.quality,
             'staff': self.staff,

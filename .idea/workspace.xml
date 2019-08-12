@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c29ebdf0-36c7-4657-bedf-0bfe67e09461" name="Default Changelist" comment="added id to reviews and delete prints">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/otzovik_com/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/otzovik_com/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/otzovik_com/otzovik_com.py" beforeDir="false" afterPath="$PROJECT_DIR$/otzovik_com/otzovik_com.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
@@ -81,7 +81,7 @@
         <item itemvalue="Makefile.dist" />
         <item itemvalue="Makefile.release" />
         <item itemvalue="Makefile.dist" />
-        <item itemvalue="Python.otzovik_com" />
+        <item itemvalue="Makefile.release" />
       </list>
     </recent_temporary>
   </component>
@@ -109,7 +109,9 @@
       <workItem from="1565110463106" duration="297000" />
       <workItem from="1565111093265" duration="167000" />
       <workItem from="1565359475454" duration="1835000" />
-      <workItem from="1565599138514" duration="185000" />
+      <workItem from="1565599138514" duration="282000" />
+      <workItem from="1565599571098" duration="336000" />
+      <workItem from="1565601196125" duration="271000" />
     </task>
     <task id="LOCAL-00001" summary="added id to reviews and delete prints">
       <created>1564357355253</created>
